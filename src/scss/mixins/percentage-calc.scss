@@ -1,0 +1,3 @@
+@function percentage-calc($size) {
+	@return calc(100% / $size);
+}

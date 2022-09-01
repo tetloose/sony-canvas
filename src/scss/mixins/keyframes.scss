@@ -1,0 +1,13 @@
+@mixin keyframes($name) {
+	@keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"{% if (dir) %} dir="{{ dir }}"{% endif %}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Canvas</title>
+    {% if (canvas_css) %}
+      <link rel="stylesheet" href="{{ canvas_css }}">
+    {% endif %}
+    <link rel="stylesheet" href="stylesheet/app.css">
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+  <script src="javascript/app.js"></script>
+</html>

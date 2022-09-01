@@ -1,0 +1,11 @@
+@mixin interaction {
+	cursor: default;
+	pointer-events: none;
+	user-select: none;
+}
+
+@mixin enable-interaction {
+	cursor: auto;
+	pointer-events: all;
+	user-select: all;
+}

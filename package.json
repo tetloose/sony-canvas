@@ -1,0 +1,64 @@
+{
+  "name": "sony-canvas",
+  "scripts": {
+    "dev": "gulp",
+    "rtl": "gulp --direction rtl",
+    "images": "gulp images",
+    "build": "gulp build"
+  },
+  "version": "0.0.1",
+  "description": "Canvas flexi-module task runner",
+  "browserslist": [
+    "last 3 versions",
+    "> 5%",
+    "Firefox ESR",
+    "Opera 12.1"
+  ],
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tetloose/sony-canvas.git"
+  },
+  "author": "James Tetley - tetloose.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tetloose/sony-canvas/issues"
+  },
+  "homepage": "https://github.com/tetloose/sony-canvas",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-polyfill": "^6.26.0",
+    "browser-sync": "^2.27.6",
+    "browserslist": "^4.17.5",
+    "del": "^5.1.0",
+    "dotenv": "^8.6.0",
+    "eslint": "^8.23.0",
+    "fs-extra": "^8.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-filter": "^6.0.0",
+    "gulp-hub": "^4.2.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-sourcemaps": "^3.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "jshint": "^2.13.5",
+    "jshint-stylish": "^2.2.1",
+    "node-notifier": "^6.0.0",
+    "require-dir": "^1.2.0",
+    "stylelint": "^14.11.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0"
+  }
+}

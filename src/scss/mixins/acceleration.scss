@@ -1,0 +1,9 @@
+@mixin hardware-acceleration {
+	backface-visibility: hidden;
+	will-change: transform, opacity;
+}
+
+@mixin un-hardware-acceleration {
+	backface-visibility: visible;
+	will-change: auto;
+}

@@ -1,0 +1,6 @@
+/* stylelint-disable */
+@mixin selection {
+  ::-moz-selection { @content; }
+  ::selection { @content; }
+}
+/* stylelint-enable */

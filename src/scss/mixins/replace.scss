@@ -1,0 +1,10 @@
+/* stylelint-disable */
+@mixin replace {
+	display: block;
+	overflow: hidden;
+	color: transparent;
+	font: 0/0 a;
+	text-indent: -2000%;
+	text-shadow: none;
+}
+/* stylelint-enable */
