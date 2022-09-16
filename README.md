@@ -6,7 +6,7 @@
 
 In dev mode, canvas css is applied either rtl or ltr. These val's can be found in `.env`.
 
-`npm i`
+`yarn`
 
 ## VSCode
 
@@ -15,10 +15,10 @@ In dev mode, canvas css is applied either rtl or ltr. These val's can be found i
 
 ## Commands
 
-- `npm run dev` Dev mode
-- `npm run rtl` Dev mode in Right To Left
-- `npm run images` Minify images
-- `npm run build` Builds /dist/index.html
+- `yarn dev` Dev mode
+- `yarn rtl` Dev mode in Right To Left
+- `yarn images` Minify images
+- `yarn build` Builds /dist/index.html
 
 ## DEV
 

@@ -18,7 +18,7 @@ module.exports = {
       return gulp.src(env.INLINE_FILES)
         .pipe(replace(/<script src="javascript\/app.js"><\/script>/, function(s) {
           const scripts = fs.readFileSync(env.INLINE_JS, 'utf8');
-          return `<script type="text/javascript">${scripts}</script>`;
+          return `<script>${scripts}</script>`;
         }))
         .pipe(gulp.dest(env.INLINE_DIST));
     }, 3000);
