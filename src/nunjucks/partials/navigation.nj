@@ -1,7 +1,10 @@
-<!-- navigation.nunjucks -->
-<p>Navigation</p>
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contacts</a>
-</nav>
+<div class="canvas-search-replace-selector-l-row">
+  <div class="canvas-search-replace-selector-l-row__col">
+    <p>Navigation</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contacts</a>
+    </nav>
+  </div>
+</div>

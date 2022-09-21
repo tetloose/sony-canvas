@@ -1,0 +1,11 @@
+#canvas-search-replace-selector .canvas-search-replace-selector-l-container {
+	position: relative;
+
+	@include rem((padding: 0 0 spacing(1)));
+
+	&__block {
+		position: relative;
+
+		@include rem((padding: spacing(1) 0));
+	}
+}

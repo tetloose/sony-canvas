@@ -1,0 +1,126 @@
+#canvas-search-replace-selector .canvas-search-replace-selector-content {
+	@include mq($med, max-width) {
+		@include rem((padding: spacing(1) 0));
+	}
+
+	@include mq($med) {
+		@include rem((padding: spacing(2) 0));
+	}
+
+	.t1 {
+		font-weight: 400;
+
+		@include mq($med, max-width) {
+			letter-spacing: -.03em;
+
+			@include rem((margin-bottom: 20px));
+			@include rem((font-size: 40px));
+			@include rem((line-height: 48px));
+		}
+
+		@include mq($med) {
+			letter-spacing: -.06em;
+
+			@include rem((margin-bottom: 32px));
+			@include rem((font-size: 55px));
+			@include rem((line-height: 72px));
+		}
+	}
+
+	.p1,
+	p {
+		font-weight: 400;
+		letter-spacing: -.02em;
+
+		@include mq($med, max-width) {
+			@include rem((font-size: 16px));
+			@include rem((line-height: 22px));
+			@include rem((margin-bottom: 20px));
+		}
+
+		@include mq($med) {
+			@include rem((font-size: 16px));
+			@include rem((line-height: 22px));
+			@include rem((margin-bottom: 32px));
+		}
+	}
+
+	.p3 {
+		@include rem((margin-bottom: 16px));
+	}
+
+	.t2 {
+		font-weight: 400;
+		letter-spacing: -.06em;
+
+		@include mq($med, max-width) {
+			@include rem((margin-bottom: 24px));
+			@include rem((font-size: 30px));
+			@include rem((line-height: 39px));
+		}
+
+		@include mq($med) {
+			@include rem((margin-bottom: 29px));
+			@include rem((font-size: 40px));
+			@include rem((line-height: 52px));
+		}
+	}
+
+	.t3 {
+		font-weight: 400;
+		letter-spacing: -.03em;
+
+		@include rem((margin-bottom: 32px));
+
+		@include mq($med, max-width) {
+			@include rem((font-size: 30px));
+			@include rem((line-height: 39px));
+		}
+
+		@include mq($med) {
+			@include rem((font-size: 38px));
+			@include rem((line-height: 50px));
+		}
+	}
+
+	.t4 {
+		font-weight: 500;
+		letter-spacing: -.03em;
+
+		@include mq($med, max-width) {
+			@include rem((font-size: 20px));
+			@include rem((line-height: 26px));
+			@include rem((margin-bottom: 24px));
+		}
+
+		@include mq($med) {
+			@include rem((font-size: 22px));
+			@include rem((line-height: 29px));
+			@include rem((margin-bottom: 29px));
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+
+		@include mq($med, max-width) {
+			@include rem((margin-bottom: 24px));
+		}
+
+		@include mq($med) {
+			@include rem((margin-bottom: 32px));
+		}
+	}
+
+	&.is-center {
+		text-align: center;
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+
+	*:not(.btn) {
+		color: $light;
+	}
+}

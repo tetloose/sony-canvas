@@ -6,6 +6,10 @@
 
 In dev mode, canvas css is applied either rtl or ltr. These val's can be found in `.env`.
 
+## Find replace
+
+Find and replace `canvas-search-replace-selector` with project name i.e. `project-name`.
+
 `yarn`
 
 ## VSCode
@@ -73,7 +77,7 @@ Some times you have to run this 2 times.
 
 ## SCSS
 
-Work in `app.scss`, mixins from `src/scss/mixins` already imported.
+Create new component in `src/scss/components` and import into `components.scss`.
 
 - `src/scss/app.scss`
 - `src/scss/settings/colors.scss`

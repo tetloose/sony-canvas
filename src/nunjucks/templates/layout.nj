@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="stylesheet/app.css">
   </head>
   <body>
-    {% block content %}{% endblock %}
+    <div id="canvas-search-replace-selector" class="js-canvas">
+      <div class="canvas-search-replace-selector-l-container">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
     <script src="javascript/app.js"></script>
   </body>
 </html>

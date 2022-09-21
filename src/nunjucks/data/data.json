@@ -1,16 +1,16 @@
 {
   "images": [
     {
-      "src": "image-one.png",
-      "alt": "Image one alt text"
+      "src": "images/banner.jpg",
+      "alt": "Banner 1"
     },
     {
-      "src": "image-two.png",
-      "alt": "Test alt"
+      "src": "images/banner.jpg",
+      "alt": "Banner 2"
     },
     {
-      "src": "image-two.png",
-      "alt": "Test"
+      "src": "images/banner.jpg",
+      "alt": "Banner 3"
     }
   ]
 }

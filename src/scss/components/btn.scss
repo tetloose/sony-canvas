@@ -1,0 +1,7 @@
+#canvas-search-replace-selector .canvas-search-replace-selector-btn {
+	margin-top: 0;
+	letter-spacing: -.04em;
+
+	@include rem((font-size: 14px));
+	@include transition(background-color, 400ms, ease);
+}
