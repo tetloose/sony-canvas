@@ -1,7 +1,32 @@
-#canvas-search-replace-selector .canvas-search-replace-selector-btn {
+.btn {
 	margin-top: 0;
+	font-size: rem(14px);
 	letter-spacing: -.04em;
 
-	@include rem((font-size: 14px));
-	@include transition(background-color, 400ms, ease);
+	@include mq-hover {
+		@include transition(background-color, 400ms, ease);
+	}
+}
+
+.btn-wrapper {
+	.btn {
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+
+		@include mq($med, max-width) {
+			margin-top: rem(12px);
+		}
+
+		@include mq($med) {
+			margin-right: rem(spacing(.4));
+			margin-left: rem(spacing(.4));
+		}
+	}
+
+	@include mq($med) {
+		display: flex;
+		margin-right: -(rem(spacing(.4)));
+		margin-left: -(rem(spacing(.4)));
+	}
 }

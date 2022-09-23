@@ -16,7 +16,14 @@ module.exports = {
     'function-comma-space-after': 'always',
     'color-hex-case': 'lower',
     'color-hex-length': 'short',
-    'color-named': 'never',
+    'color-named': [
+      'never',
+      {
+        'ignore': [
+          'inside-function'
+        ]
+      }
+    ],
     'color-no-invalid-hex': true,
     'color-function-notation': 'modern',
     'selector-no-qualifying-type': true,
@@ -53,7 +60,7 @@ module.exports = {
       },
     ],
     'max-nesting-depth': [
-      2,
+      3,
       {
         'ignore': [
           'pseudo-classes',
@@ -63,10 +70,9 @@ module.exports = {
     ],
     'order/order': [
       [
-        'declarations',
         'dollar-variables',
-        'custom-properties',
-        'at-rules',
+        'declarations',
+        'rules',
         {
           'type': 'at-rule',
           'name': 'supports',
@@ -74,8 +80,7 @@ module.exports = {
         {
           'type': 'at-rule',
           'name': 'media',
-        },
-        'rules'
+        }
       ],
       {
         'severity': 'warning'
@@ -96,7 +101,6 @@ module.exports = {
         'min-width',
         'max-width',
         'height',
-        '@include rem((',
         'min-height',
         'max-height',
         'margin',
@@ -144,10 +148,8 @@ module.exports = {
         'gap',
         'row-gap',
         'column-gap',
-
         'opacity',
         'visibility',
-
         'overflow',
         'overflow-x',
         'overflow-y',
@@ -155,7 +157,6 @@ module.exports = {
         'float',
         'clear',
         'box-sizing',
-
         'background',
         'background-color',
         'background-image',
@@ -171,7 +172,6 @@ module.exports = {
         'stroke',
         'object-fit',
         'clip',
-
         'border',
         'border-spacing',
         'border-collapse',
@@ -214,7 +214,6 @@ module.exports = {
         'border-top-right-image',
         'border-bottom-right-image',
         'border-bottom-left-image',
-
         'color',
         'font',
         'font-weight',
@@ -299,7 +298,6 @@ module.exports = {
         'user-zoom',
         'orientation',
         'unicode-bidi',
-
         'transition',
         'transition-delay',
         'transition-timing-function',

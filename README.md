@@ -2,27 +2,26 @@
 
 # CANVAS
 
-## Setup
+## Requirements
 
-In dev mode, canvas css is applied either rtl or ltr. These val's can be found in `.env`.
+- node v16.17.0
+- yarn v1.22.19
 
-## Find replace
+## Install
 
-Find and replace `canvas-search-replace-selector` with project name i.e. `project-name`.
-
-`yarn`
-
-## VSCode
-
-- `shift cmd p recommended`
-- install recommended extensions
+`yarn` - install dependencies
 
 ## Commands
 
-- `yarn dev` Dev mode
+- `yarn dev` Dev mode with live re-load
 - `yarn rtl` Dev mode in Right To Left
 - `yarn images` Minify images
 - `yarn build` Builds /dist/index.html
+
+## VSCode Recommended Plugins (optional)
+
+- `shift cmd p recommended`
+- install recommended extensions
 
 ## DEV
 
@@ -75,19 +74,61 @@ Some times you have to run this 2 times.
 - inline:css
 - beautify:build
 
-## SCSS
+## Workflow
 
-Create new component in `src/scss/components` and import into `components.scss`.
+### Search Replace
 
-- `src/scss/app.scss`
-- `src/scss/settings/colors.scss`
-- `src/scss/settings/variables.scss`
+- `proj-name` with the name of the project i.e `sb` **(sound bar)**. This will ensure your css won't override Sony Styles.
 
-## Nunjucks
+### Javascript
 
-Nunjucks handle the templating, work in pages, import partials + macros. If you need to add a new block, add it to the layout.
+Javascript is a single file, Canvas, can't handle import's, has to be basic... SOZ, but you still have access to es6^, the build process converts it to old js.
 
-- Layout `src/nunjucks/templates/layout.nj`
-- Partials `src/nunjucks/partials/*.nj`
-- Macros `src/nunjucks/macros/*t.nj`
-- Pages `src/nunjucks/pages/*layout*.nj`
+Write js in `src/javascript/app.js`.
+
+The whole project is wrapped in a js class `js-proj-name`, this provides an eventListner for click, you can then target elements via class name. See lines 3 - 13.
+
+Tracking is set up for CTA button clicks, see line 8, and line 39. Use this as a template for the tracking.
+
+
+### SCSS
+
+- Create new components in `src/scss/components` and import into `components.scss`. These are the building blocks of the project.
+- Add utility classes to `src/scss/utilities` and import into `utilities.scss`.
+
+### Layout
+
+- Containers, row and col classes -> `src/layout/*.scss`
+
+### Nunjucks
+
+Handle the templating. Work in `src/nunjucks/pages/index.nj`. Include partials + macros here.
+
+#### Macros
+
+Handle elements see `src/nunjucks/macros/elements.nj`, in conjunction with `src/nunjucks/data/data.json`, you can pass data to each element.
+
+**src/nunjucks/pages/index.nj**
+
+`{{ elements.type(heading) }}`
+
+This will pull the **type** element from the **elements macro**, you then pass the **data json** name **heading** to it.
+
+**src/nunjucks/data/data.json**
+
+```
+{
+  "heading": {
+    "type": "h1",
+    "class": "t1",
+    "text": "Title",
+    "label": "Title"
+  },
+}
+```
+
+This will generate an **h1** tag, with the class **h1**, the text **Title** and the Canvas label **Title**
+
+# Seriously
+
+- ALL THE BEST

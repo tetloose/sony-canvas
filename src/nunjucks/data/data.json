@@ -1,16 +1,52 @@
 {
-  "images": [
+  "nav": [
     {
-      "src": "images/banner.jpg",
-      "alt": "Banner 1"
+      "class": "is-active",
+      "title": "Home",
+      "url": "/",
+      "label": "Navigation Link 1"
     },
     {
-      "src": "images/banner.jpg",
-      "alt": "Banner 2"
+      "class": "",
+      "title": "About",
+      "url": "/about.html",
+      "label": "Navigation Link 2"
     },
     {
-      "src": "images/banner.jpg",
-      "alt": "Banner 3"
+      "class": "",
+      "title": "Contact",
+      "url": "/contact",
+      "label": "Navigation Link 3"
+    }
+  ],
+  "heading": {
+    "type": "h1",
+    "class": "t1",
+    "text": "Title",
+    "label": "Title"
+  },
+  "paragraph": {
+    "type": "p",
+    "class": "p2",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt fuga id repudiandae reiciendis alias, ducimus dolores incidunt. Eos quia placeat, fugit ab quis laboriosam ex nam dolor non eligendi!",
+    "label": "Paragraph"
+  },
+  "figure": {
+    "class": "square",
+    "url": "images/banner.jpg",
+    "alt": "Banner 1",
+    "label": "Gallery Image 1"
+  },
+  "btn": [
+    {
+      "title": "BTN 1",
+      "url": "https://btn1.com",
+      "label": "BTN 1"
+    },
+    {
+      "title": "BTN 2",
+      "url": "https://btn2.com",
+      "label": "BTN 2"
     }
   ]
 }

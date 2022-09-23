@@ -2,25 +2,35 @@
 {% extends "templates/layout.nj" %}
 
 {% block content %}
-  <div class="canvas-search-replace-selector-l-container__block">
-    {% include "partials/navigation.nj" %}
+  <div class="l-container__block">
+    {{ elements.nav(nav) }}
   </div>
-  <div class="canvas-search-replace-selector-l-container__block">
-    {% import 'macros/nav-macro.nj' as nav %}
-    {{nav.active('home')}}
+  <div class="l-container__block">
+    <div class="content is-center">
+      {{ elements.type(heading) }}
+      {{ elements.type(paragraph) }}
+    </div>
   </div>
-  <div class="canvas-search-replace-selector-l-container__block">
-    <div class="canvas-search-replace-selector-l-row">
-      <div class="canvas-search-replace-selector-l-row__col">
-        <h2>This is the index page</h2>
+  <div class="l-container__block">
+    <div class="l-row">
+      <div class="l-row__col is-med-1-third">
+        {{ elements.figure(figure) }}
       </div>
-      <div class="canvas-search-replace-selector-l-row__col">
-        <h3>Gallery <small>data/data.json</small></h3>
-        <p class="js-clickMe">Click me, check console</p>
-        {% for image in images %}
-          <br>
-          <img src="{{image.src}}" alt="{{image.alt}}">
-        {% endfor %}
+      <div class="l-row__col is-half is-med-1-third">
+        {{ elements.figure(figure) }}
+      </div>
+      <div class="l-row__col is-half is-med-1-third">
+        {{ elements.figure(figure) }}
+      </div>
+    </div>
+  </div>
+  <div class="l-container__block">
+    <div class="l-row">
+      <div class="l-row__col">
+        <div class="btn-wrapper">
+          {{ elements.btn(btn[0]) }}
+          {{ elements.btn(btn[1]) }}
+        </div>
       </div>
     </div>
   </div>

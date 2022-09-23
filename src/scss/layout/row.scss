@@ -1,7 +1,7 @@
-#canvas-search-replace-selector .canvas-search-replace-selector-l-row {
+.l-row {
 	display: flex;
 	width: 100%;
-	max-width: $max-width;
+	max-width: rem($max-width);
 	margin-right: auto;
 	margin-left: auto;
 	flex-wrap: wrap;
@@ -30,8 +30,69 @@
 	&__col {
 		width: 100%;
 
-		@include rem((padding-left: spacing(1)));
-		@include rem((padding-right: spacing(1)));
+		@include mq($med, max-width) {
+			padding-right: rem(spacing(.5));
+			padding-left: rem(spacing(.5));
+		}
+
+		&.is-relative {
+			position: relative;
+		}
+
+		&.no-overflow {
+			overflow: hidden;
+		}
+
+		&.is-left {
+			text-align: left;
+		}
+
+		&.is-right {
+			text-align: right;
+		}
+
+		&.is-center {
+			text-align: center;
+		}
+
+		&.is-centered {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&.is-half {
+			width: column-width(3, 1.5);
+		}
+
+		&.is-1-third {
+			width: column-width(3, 1);
+		}
+
+		&.is-2-third {
+			width: column-width(3, 2);
+		}
+
+		&.is-1-forth {
+			width: column-width(4, 1);
+		}
+
+		&.is-3-forth {
+			width: column-width(4, 3);
+		}
+
+		&.no-gutter {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		&.no-gutter-right {
+			padding-right: 0;
+		}
+
+		&.no-gutter-left {
+			padding-left: 0;
+		}
 
 		@include mq($sml) {
 			&.is-sml-half {
@@ -56,6 +117,9 @@
 		}
 
 		@include mq($med) {
+			padding-right: rem(spacing(1));
+			padding-left: rem(spacing(1));
+
 			&.is-med-half {
 				width: column-width(3, 1.5);
 			}
@@ -128,72 +192,20 @@
 				width: column-width(4, 3);
 			}
 		}
-
-		&.is-relative {
-			position: relative;
-		}
-
-		&.no-overflow {
-			overflow: hidden;
-		}
-
-		&.is-left {
-			text-align: left;
-		}
-
-		&.is-right {
-			text-align: right;
-		}
-
-		&.is-center {
-			text-align: center;
-		}
-
-		&.is-centered {
-			display: block;
-			margin-right: auto;
-			margin-left: auto;
-		}
-
-		&.is-half {
-			width: column-width(3, 1.5);
-		}
-
-		&.is-1-third {
-			width: column-width(3, 1);
-		}
-
-		&.is-2-third {
-			width: column-width(3, 2);
-		}
-
-		&.is-1-forth {
-			width: column-width(4, 1);
-		}
-
-		&.is-3-forth {
-			width: column-width(4, 3);
-		}
-
-		&.no-gutter {
-			padding-right: 0;
-			padding-left: 0;
-		}
-
-		&.no-gutter-right {
-			padding-right: 0;
-		}
-
-		&.no-gutter-left {
-			padding-left: 0;
-		}
 	}
 
-	.canvas-search-replace-selector-l-row {
+	.l-row {
 		width: auto;
 		max-width: none;
 
-		@include rem((margin-left: -(spacing(1))));
-		@include rem((margin-right: -(spacing(1))));
+		@include mq($lrg, max-width) {
+			margin-right: -(rem(spacing(.475)));
+			margin-left: -(rem(spacing(.475)));
+		}
+
+		@include mq($lrg) {
+			margin-right: -(rem(spacing(2)));
+			margin-left: -(rem(spacing(2)));
+		}
 	}
 }

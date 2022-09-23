@@ -1,10 +1,12 @@
-const canvas = document.querySelector('.js-canvas')
+const canvas = document.querySelector('.js-proj-name')
 
 function canvasHandleClick(e) {
   const elem = e.target
 
-  if (elem.classList.contains('js-clickMe')) {
-    console.log('Check app.js line 7 for event handler click')
+  console.log('Clicked', elem)
+
+  if (elem.classList.contains('js-trackingCTA')) {
+    trackingCTA(elem)
   }
 }
 
@@ -32,13 +34,17 @@ function CustomEvent(event, params) {
 CustomEvent.prototype = window.Event.prototype
 window.CustomEvent = CustomEvent
 
-window.trackingObject = {}
+window.trackingCTAObj = {}
 
-function canvasTracking(e) {
-  window.trackingObject = new CustomEvent('trackingObject', {
+function trackingCTA(e) {
+  window.trackingCTAObj = new CustomEvent('trackingCTAObj', {
     detail: {
-      questionnaireTitle: e
+      projTitle: 'Proj Title',
+      buttonTitle: e.dataset.buttonTitle.toLocaleLowerCase().split(' ').join('-'),
+      buttonUrl: e.href
     }
   })
-  document.dispatchEvent(window.trackingObject)
+  document.dispatchEvent(window.trackingCTAObj)
+
+  console.log(window.trackingCTAObj)
 }

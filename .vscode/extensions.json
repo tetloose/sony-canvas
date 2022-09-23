@@ -2,6 +2,8 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "ronnidc.nunjucks",
+    "EditorConfig.EditorConfig"
   ]
 }

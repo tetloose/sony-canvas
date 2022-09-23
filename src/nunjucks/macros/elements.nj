@@ -1,0 +1,53 @@
+{% macro nav(data) %}
+  {% if data %}
+    <nav>
+      {% for link in data %}
+        <a
+          {% if link.class %}
+            class="{{ link.class }}"
+          {% endif %}
+          href="{{ link.url }}"
+          data-translate="yes"
+          data-label="{{ link.label }}">
+          {{ link.title }}
+        </a>
+      {% endfor %}
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+{% macro figure(data) %}
+  {% if data %}
+    <figure class="figure{% if data.class %} is-{{ data.class }}{% endif %}">
+      <img
+        src="{{ data.url }}"
+        alt="{{ data.alt }}"
+        label="{{ data.label }}"
+        class="u-object-fit">
+    </figure>
+  {% endif %}
+{% endmacro %}
+
+{% macro type(data) %}
+  {% if data %}
+    <{{ data.type }}
+      {% if data.class %}class="{{ data.class }}"{% endif %}
+      data-translate="true"
+      data-label="{{ data.label }}">
+      {{ data.text|safe }}
+    </{{ data.type }}>
+  {% endif %}
+{% endmacro %}
+
+{% macro btn(data) %}
+  {% if data %}
+    <a
+      href="{{ data.url }}"
+      class="btn js-trackingCTA"
+      data-translate="true"
+      data-label="{{ data.label }}"
+      data-button-title="{{ data.title }}">
+      {{ data.title }}
+    </a>
+  {% endif %}
+{% endmacro %}

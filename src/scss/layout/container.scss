@@ -1,11 +1,27 @@
-#canvas-search-replace-selector .canvas-search-replace-selector-l-container {
+.l-container {
 	position: relative;
 
-	@include rem((padding: 0 0 spacing(1)));
+	@include mq($med, max-width) {
+		padding-bottom: rem(spacing(1));
+	}
+
+	@include mq($med) {
+		padding-bottom: rem(spacing(2));
+	}
 
 	&__block {
 		position: relative;
 
-		@include rem((padding: spacing(1) 0));
+		@include mq($med, max-width) {
+			padding-top: rem(spacing(1));
+			padding-right: rem(spacing(.5));
+			padding-left: rem(spacing(.5));
+		}
+
+		@include mq($med) {
+			padding-top: rem(spacing(2));
+			padding-right: rem(spacing(1));
+			padding-left: rem(spacing(1));
+		}
 	}
 }
