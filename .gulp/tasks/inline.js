@@ -6,7 +6,7 @@ module.exports = {
   css: (env) => {
     setTimeout(() => {
       return gulp.src(env.INLINE_FILES)
-        .pipe(replace(/<link rel="stylesheet" href="stylesheet\/app.css">/, function(s) {
+        .pipe(replace(/<link rel="stylesheet" href="stylesheet\/app.css">/, function() {
           const styles = fs.readFileSync(env.INLINE_CSS, 'utf8');
           return `<style>${styles}</style>`;
         }))
@@ -16,7 +16,7 @@ module.exports = {
   js: (env) => {
     setTimeout(() => {
       return gulp.src(env.INLINE_FILES)
-        .pipe(replace(/<script src="javascript\/app.js"><\/script>/, function(s) {
+        .pipe(replace(/<script src="javascript\/app.js"><\/script>/, function() {
           const scripts = fs.readFileSync(env.INLINE_JS, 'utf8');
           return `<script>(function() {${scripts}})();</script>`;
         }))
