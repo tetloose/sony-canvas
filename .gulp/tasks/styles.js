@@ -6,7 +6,7 @@ const plumber = require('gulp-plumber');
 const sass = require('gulp-dart-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const filter = require('gulp-filter');
-const minifycss = require('gulp-cssnano');
+const cleanCss = require('gulp-clean-css');
 const browserSync = require('browser-sync');
 
 function scssError(e) {
@@ -34,7 +34,7 @@ module.exports = {
         .on('error', sass.logError)
       )
       .pipe(autoprefixer())
-      .pipe(minifycss())
+      .pipe(cleanCss())
       .pipe(gulp.dest(env.CSS_DEST));
   },
 };
