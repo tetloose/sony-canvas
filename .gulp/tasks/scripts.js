@@ -14,7 +14,7 @@ function jsError() {
 
 module.exports = {
   jshint: (env) => {
-    return gulp.src(env.JS_APP)
+    return gulp.src(env.JS_FILES)
     .pipe(jshint('.jshintrc'))
     .pipe(plumber({ errorHandler: jsError }))
     .pipe(jshint.reporter('jshint-stylish'))
