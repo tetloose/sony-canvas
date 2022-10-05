@@ -7,6 +7,7 @@
             class="{{ link.class }}"
           {% endif %}
           href="{{ link.url }}"
+          data-nobreak="true"
           data-translate="yes"
           data-label="{{ link.label }}">
           {{ link.title }}
@@ -32,6 +33,7 @@
   {% if data %}
     <{{ data.type }}
       {% if data.class %}class="{{ data.class }}"{% endif %}
+      data-nobreak="true"
       data-translate="true"
       data-label="{{ data.label }}">
       {{ data.text|safe }}
@@ -41,13 +43,12 @@
 
 {% macro btn(data) %}
   {% if data %}
-    <a
-      href="{{ data.url }}"
+    <span
       class="btn js-trackingCTA"
+      data-nobreak="true"
       data-translate="true"
-      data-label="{{ data.label }}"
-      data-button-title="{{ data.title }}">
-      {{ data.title }}
-    </a>
+      data-label="{{ data.label }}">
+      {{ data.title|safe }}
+    </span>
   {% endif %}
 {% endmacro %}

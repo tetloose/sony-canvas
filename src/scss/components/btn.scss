@@ -1,21 +1,16 @@
-.btn {
-	margin-top: 0;
-	font-size: rem(14px);
-	letter-spacing: -.04em;
-
-	@include mq-hover {
-		@include transition(background-color, 400ms, ease);
-	}
-}
-
 .btn-wrapper {
 	.btn {
 		width: 100%;
-		padding-right: 0;
-		padding-left: 0;
+		padding: 0;
 
 		@include mq($med, max-width) {
 			margin-top: rem(12px);
+			font-size: rem(12px);
+		}
+
+		@include mq($sml) {
+			margin-right: rem(spacing(.1));
+			margin-left: rem(spacing(.1));
 		}
 
 		@include mq($med) {
@@ -24,9 +19,31 @@
 		}
 	}
 
-	@include mq($med) {
+	@include mq($sml) {
 		display: flex;
+		margin-right: -(rem(spacing(.1)));
+		margin-left: -(rem(spacing(.1)));
+	}
+
+	@include mq($med) {
 		margin-right: -(rem(spacing(.4)));
 		margin-left: -(rem(spacing(.4)));
+	}
+}
+
+.btn {
+	margin-top: 0;
+	font-size: rem(14px);
+	letter-spacing: -.04em;
+
+	@include mq-hover {
+		@include transition(background-color, 400ms, ease);
+	}
+
+	> a {
+		display: block;
+		padding: rem(11px) 0 rem(13px);
+		color: $light;
+		outline: none;
 	}
 }

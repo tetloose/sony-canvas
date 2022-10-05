@@ -5,7 +5,7 @@ function canvasHandleClick(e) {
 
   console.log('Clicked', elem)
 
-  if (elem.classList.contains('js-trackingCTA')) {
+  if (elem.parentElement.classList.contains('js-trackingCTA')) {
     trackingCTA(elem)
   }
 }
