@@ -14,7 +14,7 @@
 ## Commands
 
 - `yarn dev` Dev mode with live re-load
-- `yarn rtl` Dev mode in Right To Left
+- `yarn dev --rtl rtl` Dev mode in Right To Left
 - `yarn images` Minify images
 - `yarn build` Builds /dist/index.html
 
